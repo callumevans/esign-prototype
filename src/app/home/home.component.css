@@ -1,0 +1,7 @@
+table.summary {
+    background: #d8ebfb;
+}
+
+li > div {
+    display: inline-block;
+}
