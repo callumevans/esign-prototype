@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from "app/app.routing";
@@ -14,6 +15,7 @@ import { Page2Component } from "app/page2/page2.component";
   ],
   imports: [
     BrowserModule,
+    NgbModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],
