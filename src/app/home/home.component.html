@@ -1,52 +1,64 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        Heading
-    </div>
-
-    <div class="panel-body">
-        Test body
-    </div>
-</div>
 <h1>Welcome</h1>
 
 <h2>
-    We are going to complete the signing of your finance agreement. You will need to:
+    We are going to complete the signing of your finance agreement. There are 4 documents you will need to read through, sign
+    and confirm:
 </h2>
 
 <ul>
     <li>
         <i class="fa fa-check"></i> Sign PCI
-        <div class="fa fa-info-circle" tooltip-template="pci-tooltip.html"></div>
+        <div class="fa fa-info-circle" [ngbTooltip]="pciTooltip"></div>
     </li>
     <li>
         <i class="fa fa-check"></i> Sign HP
-        <span class="fa fa-info-circle" tooltip=""></span>
+        <span class="fa fa-info-circle" [ngbTooltip]="hpTooltip"></span>
     </li>
     <li>
         <i class="fa fa-check"></i> Read T+C's
-        <i class="fa fa-info-circle" tooltip=""></i>
+        <i class="fa fa-info-circle" [ngbTooltip]="tcTooltip"></i>
     </li>
 </ul>
 
 <div>
-    Please take a minute to review the details of your agreement:
+    Before we start, please take a minute to confirm the details of your agreement:
 
     <table class="table table-bordered summary">
         <tr>
-            <td>Vehicle</td>
+            <td><strong>Vehicle</strong></td>
             <td>Ford Focus</td>
-            <td>APR</td>
+            <td><strong>APR</strong></td>
             <td>12.8%</td>
         </tr>
         <tr>
-            <td>Total Amoutn</td>
+            <td><strong>Total Amount</strong></td>
             <td>£9,005</td>
-            <td>Period</td>
+            <td><strong>Period</strong></td>
             <td>5 years</td>
         </tr>
     </table>
 </div>
 
 <div class="center">
-    <button class="btn btn-lg btn-success" routerLink="/page2">Start</button>
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="detailsCorrect">
+            The details above are correct
+        </label>
+    </div>
+    <button class="btn btn-lg btn-success" routerLink="/documents" [disabled]="!detailsCorrect">Begin</button>
 </div>
+
+
+<!-- TODO - move these out to separate files -->
+<ng-template #pciTooltip>
+    <h3>What is PCI</h3>
+</ng-template>
+
+<ng-template #hpTooltip>
+    <h3>What is Hire Purchase</h3>
+</ng-template>
+
+<ng-template #tcTooltip>
+    <h3>Terms & Conditions</h3>
+</ng-template>
