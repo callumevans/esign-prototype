@@ -8,15 +8,15 @@
 <ul>
     <li>
         <i class="fa fa-check"></i> Sign PCI
-        <div class="fa fa-info-circle" [ngbTooltip]="pciTooltip"></div>
+        <div class="fa fa-info-circle" [ngbTooltip]="pciTooltip" placement="right"></div>
     </li>
     <li>
         <i class="fa fa-check"></i> Sign HP
-        <span class="fa fa-info-circle" [ngbTooltip]="hpTooltip"></span>
+        <span class="fa fa-info-circle" [ngbTooltip]="hpTooltip" placement="right"></span>
     </li>
     <li>
         <i class="fa fa-check"></i> Read T+C's
-        <i class="fa fa-info-circle" [ngbTooltip]="tcTooltip"></i>
+        <i class="fa fa-info-circle" [ngbTooltip]="tcTooltip" placement="right"></i>
     </li>
 </ul>
 
@@ -53,12 +53,17 @@
 <!-- TODO - move these out to separate files -->
 <ng-template #pciTooltip>
     <h3>What is PCI</h3>
+    Customers are legally entitled to be given certain information before entering into a finance agreement. ... For regulated consumer hire agreements, and some regulated credit agreements, the form and content of the pre-contract information is prescribed by the Consumer Credit (Disclosure of Information) Regulations 2004
 </ng-template>
 
 <ng-template #hpTooltip>
     <h3>What is Hire Purchase</h3>
+    Hire purchase is a way to finance buying a new or used car. You (usually) pay a deposit and pay off the value of the car in monthly instalments, with the loan secured against the car. This means you don't own the vehicle until the last payment is made.    
 </ng-template>
 
 <ng-template #tcTooltip>
     <h3>Terms & Conditions</h3>
+    Bacon ipsum dolor amet biltong kevin shankle, corned beef cow pig meatloaf shoulder. Cow salami beef ribs, bresaola sirloin spare ribs bacon pork chop tail picanha chicken ham. Venison pork loin fatback t-bone turkey flank picanha pork. Alcatra beef ribeye pork tail pork loin. Ball tip cupim pork belly rump, burgdoggen ham tri-tip pancetta ground round.
+    
+    
 </ng-template>
