@@ -1,17 +1,17 @@
 .members-bg{
     background-image: url("members-documents.png");
-    height: 922px;
+    height: 770px;
     width: 576px;
     display: block;
     position: relative;
-    top: -211px;
+    top: -44px;
     margin: 0 auto;
 }
 
 .sign-btn {
     position: relative;
-    left: 100px;
-    top: 832px;
+    left: 170px;
+    top: 683px;
     height: 40px;
     width: 206px;
     cursor: pointer;
