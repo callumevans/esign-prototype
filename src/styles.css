@@ -8,18 +8,32 @@
     cursor: pointer;
 }
 
-.btn-purple{
+.btn-purple {
     background-color: #3F0080;
     color: white;
 }
-
+.btn-success{
+    background-color:#79ba30;
+}
 body {
     background-color:#422d6e;
 }
 
+nav{
+    background: linear-gradient(to right, #23313E, #362460);
+    color:white;
+}
 .container {
     background-color:white;
     padding: 25px;
     margin:0 auto;
+    
+    margin-top: 20px;
     width: inherit;
+}
+.company-name {
+    float: right;
+    margin-right:20px;
+    font-weight: 900;
+    font-size: 24px;
 }
