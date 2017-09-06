@@ -14,6 +14,7 @@
     width: 206px;
     background: #06aeff;
     cursor: pointer;
+    border-radius: 5px;
 }
 .complete-btn .btn-text {
     font-size: 18px;
