@@ -1,11 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 .center {
-
     text-align: center;
 }
 
 .btn {
     cursor: pointer;
+}
+
+.btn-purple{
+    background-color: #3F0080;
+    color: white;
+}
+
+body {
+    background-color:#422d6e;
+}
+
+.container {
+    background-color:white;
+    padding: 25px;
+    margin:0 auto;
+    width: inherit;
 }

@@ -1,12 +1,12 @@
-table.summary {
+.summary{
+    padding: 15px;
+}
+.summary .card{
     background: #d8ebfb;
+    text-align: center;
 }
 
-li > div {
-    display: inline-block;
-}
-
-.fa-info-circle{
+.fa-info-circle {
     cursor:pointer;
 }
 
