@@ -10,10 +10,8 @@ export class TransitionComponent implements OnInit {
     loadingGifUrl = 'assets/transition.gif';
 
     ngOnInit() {
-        const timer = Observable.timer(5000);
-        timer.subscribe(t => {
-            this.changePage();
-        });
+        setTimeout(() =>
+            this.changePage(), 5000);
     }
 
     changePage(): void {
