@@ -5,11 +5,16 @@ import { HomeComponent } from 'app/home/home.component';
 import { SignAgreementComponent } from 'app/signAgreement/signAgreement.component';
 import { CompleteAgreementComponent } from 'app/complete/complete.component';
 import { TransitionComponent } from 'app/TransitionPage/transition.component';
+import { MembersComponent } from 'app/members/members.component';
 
 const appRoutes: Routes = [
     {
         path: 'home',
         component: HomeComponent
+    },
+    {
+        path: 'members',
+        component: MembersComponent
     },
     {
         path: 'page2',

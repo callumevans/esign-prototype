@@ -10,6 +10,7 @@ import { Page2Component } from 'app/page2/page2.component';
 import { SignAgreementComponent } from 'app/signAgreement/signAgreement.component';
 import { CompleteAgreementComponent } from 'app/complete/complete.component';
 import { TransitionComponent } from 'app/TransitionPage/transition.component';
+import { MembersComponent } from 'app/members/members.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TransitionComponent } from 'app/TransitionPage/transition.component';
     Page2Component,
     SignAgreementComponent,
     CompleteAgreementComponent,
-    TransitionComponent
+    TransitionComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,
