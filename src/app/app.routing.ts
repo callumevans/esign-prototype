@@ -34,7 +34,7 @@ const appRoutes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/',
+        redirectTo: 'members',
         pathMatch: 'full'
     }
 ];
