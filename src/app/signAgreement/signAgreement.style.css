@@ -1,0 +1,14 @@
+.agreement { 
+    height:400px;
+    overflow-y: scroll;
+}
+
+.agreementTick{
+    float: right;
+    color: #0C0;
+}
+
+.agreementCross{
+    float: right;
+    color: #C00;
+}

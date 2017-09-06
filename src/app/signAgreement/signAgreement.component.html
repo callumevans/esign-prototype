@@ -1,0 +1,91 @@
+<h1 class="display-1">Sign your agreements</h1>
+<br/>
+<div class="row">
+    <div class="col-md-10">
+        <ngb-accordion [closeOthers]="true" activeIds="static-1">
+            <ngb-panel>
+                <ng-template ngbPanelTitle>
+                        <h3>
+                            SECCI
+                            <span *ngIf="SECCIagreementComplete" class="agreementTick">&#10004;</span>
+                            <span *ngIf="!SECCIagreementComplete" class="agreementCross">X</span>
+                        </h3>
+                        
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="agreement">
+                                {{ agreementBody }}
+                                <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete)"><strong> I Agree I have read the document.</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </ng-template>                        
+            </ngb-panel>                        
+            <ngb-panel>
+                <ng-template ngbPanelTitle>
+                        <h3>
+                            T&Cs
+                            <span *ngIf="TnCsagreementComplete"  class="agreementTick">&#10004;</span>
+                            <span *ngIf="!TnCsagreementComplete" class="agreementCross">X</span>                            
+                        </h3>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="agreement">
+                                {{ agreementBody }}
+                                <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete)"><strong> I Agree I have read the document.</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </ng-template>                        
+            </ngb-panel>
+            <ngb-panel>
+                <ng-template ngbPanelTitle>
+                        <h3>
+                            HP
+                            <span *ngIf="HPagreementComplete"  class="agreementTick">&#10004;</span>
+                            <span *ngIf="!HPagreementComplete" class="agreementCross">X</span>                            
+                        </h3>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="agreement">
+                                {{ agreementBody }}
+                                <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete)"><strong> I Agree I have read the document.</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </ng-template>                        
+            </ngb-panel>
+            <ngb-panel>
+                <ng-template ngbPanelTitle>
+                        <h3>
+                            DDM
+                            <span *ngIf="DDMagreementComplete"  class="agreementTick">&#10004;</span>
+                            <span *ngIf="!DDMagreementComplete" class="agreementCross">X</span>                            
+                        </h3>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="agreement">
+                                {{ agreementBody }}
+                                <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" [checked]="DDMagreementComplete" (change)="setDDMagreement(!DDMagreementComplete)"><strong> I Agree I have read the document.</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </ng-template>                        
+            </ngb-panel>
+        </ngb-accordion>
+    </div>
+    <div class="col-md-2">
+        <button class="btn"
+            [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
+            [attr.disabled]="!completeButtonEnabled == true ? true : null"
+            (click)="complete()">Click and Complete</button>
+    </div>
+</div>
