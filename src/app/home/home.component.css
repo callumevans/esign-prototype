@@ -1,0 +1,15 @@
+table.summary {
+    background: #d8ebfb;
+}
+
+li > div {
+    display: inline-block;
+}
+
+.fa-info-circle{
+    cursor:pointer;
+}
+
+h3 {
+    font-size: 22px;
+}
