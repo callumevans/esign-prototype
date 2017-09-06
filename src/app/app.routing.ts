@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Page2Component } from "app/page2/page2.component";
-import { HomeComponent } from "app/home/home.component";
+import { Page2Component } from 'app/page2/page2.component';
+import { HomeComponent } from 'app/home/home.component';
+import { SignAgreementComponent } from 'app/signAgreement/signAgreement.component';
+import { CompleteAgreementComponent } from 'app/complete/complete.component';
+import { TransitionComponent } from 'app/TransitionPage/transition.component';
 
 const appRoutes: Routes = [
     {
@@ -13,8 +16,20 @@ const appRoutes: Routes = [
         component: Page2Component
     },
     {
+        path: 'signAgreement',
+        component: SignAgreementComponent
+    },
+    {
+        path: 'completeAgreement',
+        component: CompleteAgreementComponent
+    },
+    {
+        path: 'transition',
+        component: TransitionComponent
+    },
+    {
         path: '',
-        redirectTo: '/home',
+        redirectTo: '/',
         pathMatch: 'full'
     }
 ];
