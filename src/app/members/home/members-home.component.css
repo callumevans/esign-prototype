@@ -1,0 +1,24 @@
+.members-bg{
+    background-image: url("members-home.png");
+    height: 1525px;
+    width: 720px;
+    display: inline;
+
+    position: absolute;
+    left: 87px;
+    top: -66px;
+}
+
+.docs-btn {
+    position: relative;
+    left: 484px;
+    top: 896px;
+    height: 40px;
+    width: 215px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.container {
+    background: inherit;
+}

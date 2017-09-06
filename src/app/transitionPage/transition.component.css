@@ -1,6 +1,4 @@
-body {
+.container {
     color: white;
-}
-.container{
-    background: #422d6e;
+    background: #422d6e !important;
 }

@@ -1,0 +1,23 @@
+.members-bg{
+    background-image: url("members-documents.png");
+    height: 922px;
+    width: 576px;
+    display: block;
+    position: relative;
+    top: -211px;
+    margin: 0 auto;
+}
+
+.sign-btn {
+    position: relative;
+    left: 100px;
+    top: 832px;
+    height: 40px;
+    width: 206px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.container {
+    background: inherit;
+}
