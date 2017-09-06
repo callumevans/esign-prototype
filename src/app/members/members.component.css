@@ -10,7 +10,6 @@
     position: relative;
     left: 300px;
     top: 605px;
-    border: 1px solid red;
     height: 40px;
     width: 206px;
     background: #06aeff;
@@ -34,7 +33,6 @@
     position: relative;
     left: 46px;
     top: 607px;
-    border: 1px solid red;
     height: 25px;
     width: 25px;
     float: left;
