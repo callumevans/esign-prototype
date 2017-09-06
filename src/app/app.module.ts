@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from "app/app.routing";
 import { HomeComponent } from "app/home/home.component";
 import { Page2Component } from "app/page2/page2.component";
+import { MembersComponent } from "app/members/members.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    MembersComponent,
     Page2Component
   ],
   imports: [
