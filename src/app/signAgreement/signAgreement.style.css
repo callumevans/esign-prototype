@@ -8,7 +8,11 @@
     color: #0C0;
 }
 
-.agreementCross{
+.argeementButton{
     float: right;
-    color: #C00;
+}
+
+#completeButtonDiv{
+    margin-left: auto;
+    margin-right: auto;
 }
