@@ -6,7 +6,7 @@
     position: absolute;
 }
 
-.floaty-hax {
+.complete-btn {
     position: relative;
     left: 300px;
     top: 605px;
@@ -16,7 +16,7 @@
     background: #06aeff;
     cursor: pointer;
 }
-.floaty-hax .btn-text {
+.complete-btn .btn-text {
     font-size: 18px;
     left: 64px;
     position: absolute;
@@ -25,7 +25,7 @@
     font-weight: 500;
     cursor: pointer;
 }
-.floaty-hax.disabled {
+.complete-btn.disabled {
     background: transparent;
     cursor: not-allowed;
 }

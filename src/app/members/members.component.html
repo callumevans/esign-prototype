@@ -4,7 +4,7 @@
         <span class="fa fa-check" *ngIf="verifyTicked"></span>
     </div>
 
-    <div class="floaty-hax" (click)="goToHome()" [ngClass]="{'disabled': !verifyTicked}">
+    <div class="complete-btn" [ngClass]="{'disabled': !verifyTicked}">
         <!-- TODO this should link to the transition page -->
         <div class="btn-text" *ngIf="verifyTicked" routerLink="/home">Complete</div>
     </div>

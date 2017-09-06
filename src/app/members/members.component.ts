@@ -7,8 +7,4 @@ import { Component } from "@angular/core";
 })
 export class MembersComponent {
     verifyTicked: boolean;
-
-    goToHome() {
-        console.log("Go to home");
-    }
 }
