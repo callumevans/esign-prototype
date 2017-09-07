@@ -6,21 +6,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from 'app/app.routing';
 import { HomeComponent } from 'app/home/home.component';
-import { Page2Component } from 'app/page2/page2.component';
 import { SignAgreementComponent } from 'app/signAgreement/signAgreement.component';
 import { CompleteAgreementComponent } from 'app/complete/complete.component';
 import { TransitionComponent } from 'app/TransitionPage/transition.component';
-import { MembersComponent } from 'app/members/members.component';
+import { MembersDocumentsComponent } from "app/members/documents/members-documents.component";
+import { MembersHomeComponent } from "app/members/home/members-home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    Page2Component,
     SignAgreementComponent,
     CompleteAgreementComponent,
     TransitionComponent,
-    MembersComponent
+    MembersHomeComponent,
+    MembersDocumentsComponent
   ],
   imports: [
     BrowserModule,

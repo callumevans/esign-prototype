@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Page2Component } from 'app/page2/page2.component';
 import { HomeComponent } from 'app/home/home.component';
 import { SignAgreementComponent } from 'app/signAgreement/signAgreement.component';
 import { CompleteAgreementComponent } from 'app/complete/complete.component';
 import { TransitionComponent } from 'app/TransitionPage/transition.component';
-import { MembersComponent } from 'app/members/members.component';
+import { MembersHomeComponent } from "app/members/home/members-home.component";
+import { MembersDocumentsComponent } from "app/members/documents/members-documents.component";
 
 const appRoutes: Routes = [
     {
@@ -13,12 +13,12 @@ const appRoutes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'members',
-        component: MembersComponent
+        path: 'members-home',
+        component: MembersHomeComponent
     },
     {
-        path: 'page2',
-        component: Page2Component
+        path: 'members-documents',
+        component: MembersDocumentsComponent
     },
     {
         path: 'signAgreement',
@@ -34,7 +34,7 @@ const appRoutes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'members',
+        redirectTo: 'members-home',
         pathMatch: 'full'
     }
 ];

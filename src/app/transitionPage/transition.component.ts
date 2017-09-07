@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     selector: 'transition',
-    templateUrl: 'transition.component.html'
+    templateUrl: 'transition.component.html',
+    styleUrls: ['transition.component.css']
 })
 
 export class TransitionComponent implements OnInit {
