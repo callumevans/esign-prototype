@@ -36,7 +36,7 @@ import { LoremIpsum } from 'app/signAgreement/loremIpsum';
       this.enableContinueButton();
     }
 
-    setDDMagreement(val): void {
+    setDDMagreement(val, acc): void {
       this.DDMagreementComplete = val;
       this.enableContinueButton();
     }

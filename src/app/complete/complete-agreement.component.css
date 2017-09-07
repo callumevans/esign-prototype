@@ -8,6 +8,16 @@
     text-align: center;
 }
 
+.btn {
+    margin-top:10px;
+}
+
+.btn-purple {
+    background-color: rgba(0, 0, 0, 0.00);
+    border-color: white;
+    color: white;
+}
+
 *{
     text-align: center;
 }
