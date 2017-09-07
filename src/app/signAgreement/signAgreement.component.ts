@@ -14,31 +14,13 @@ import { LoremIpsum } from 'app/signAgreement/loremIpsum';
     TnCsagreementComplete = false;
     HPagreementComplete = false;
     DDMagreementComplete = false;
+    panelDelay = 500;
+    timeout: any;
 
     complete(): void {
       if (this.completeButtonEnabled) {
         location.href = '/completeAgreement';
       }
-    }
-
-    setSECCIagreement(val): void {
-      this.SECCIagreementComplete = val;
-      this.enableContinueButton();
-    }
-
-    setTnCsagreement(val): void {
-      this.TnCsagreementComplete = val;
-      this.enableContinueButton();
-    }
-
-    setHPagreement(val): void {
-      this.HPagreementComplete = val;
-      this.enableContinueButton();
-    }
-
-    setDDMagreement(val, acc): void {
-      this.DDMagreementComplete = val;
-      this.enableContinueButton();
     }
 
     enableContinueButton(): void {
@@ -48,4 +30,25 @@ import { LoremIpsum } from 'app/signAgreement/loremIpsum';
           this.HPagreementComplete &&
           this.DDMagreementComplete;
     }
+
+  setSECCIagreement(val, acc): void {
+    this.SECCIagreementComplete = val;
+    this.timeout = setTimeout(() => acc.toggle('tncPanel'), this.panelDelay);
+  }
+
+  setTnCsagreement(val, acc): void {
+    this.TnCsagreementComplete = val;
+    this.timeout = setTimeout(() => acc.toggle('hpPanel'), this.panelDelay);
+  }
+
+  setHPagreement(val, acc): void {
+    this.HPagreementComplete = val;
+    this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
+  }
+
+  setDDMagreement(val, acc): void {
+    this.DDMagreementComplete = val;
+    this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
+    this.completeButtonEnabled = val;
+  }
 }

@@ -1,12 +1,12 @@
 .members-bg{
     background-image: url("members-home.png");
     height: 1445px;
-    width: 720px;
-
-    top: -66px;
-    
+    width: 740px;
+    top: -55px;
     display: block;
     position: relative;
+    border: 10px solid white;
+    border-radius: 7px;
 }
 
 .docs-btn {
@@ -22,6 +22,7 @@
     line-height: 22px;
     border-radius: 5px;
     cursor: pointer;
+    background:#9dd034;
 }
 
 .container {

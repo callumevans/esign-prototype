@@ -1,15 +1,38 @@
-.summary{
-    padding: 15px;
-}
-.summary .card{
-    background: #d8ebfb;
-    text-align: center;
+.summary {
+    
 }
 
-.fa-info-circle {
-    cursor:pointer;
+.summary .card{
+    background: #E5E5E5;
+    color: black;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.card-header {
+    color: #0394D9;
+    padding: 0.2em;
+    font-size: 1.2em;
+}
+.pound {
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.fa {
+    padding-right: 5px;
+}
+
+.card-body {
+    padding: 0;
 }
 
 h3 {
     font-size: 22px;
+}
+.btn {
+    margin-top: 10px;
+}
+strong{
+    color: #06aeff
 }

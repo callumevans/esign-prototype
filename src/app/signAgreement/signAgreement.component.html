@@ -1,97 +1,121 @@
 <div class="container">
-<div class="row">
-    <div class="col-md-10">
-            <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion">
-                    <ngb-panel id="secciPanel">
-                        <ng-template ngbPanelTitle>
-                            <h3>
-                                SECCI
-                                <button class="btn agreementButton" [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }">
-                                            {{ !SECCIagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'secciPanel' ? '&#9650;' : '&#9660;' }}</button>
-                                <span *ngIf="SECCIagreementComplete" class="agreementTick">&#10004;</span>
-                            </h3>
-                        
-                    </ng-template>
-                    <ng-template ngbPanelContent>
-                        <div class="agreement">
-                                {{ agreementBody }}
-                                <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete)"><strong> I Agree I have read the document.</strong>
-                                </label>
-                            </div>
-                        </div>
-                    </ng-template>                        
-            </ngb-panel>                        
-            <ngb-panel>
-                <ng-template ngbPanelTitle>
-                        <h3>
-                            T&Cs
-                            <span *ngIf="TnCsagreementComplete"  class="agreementTick">&#10004;</span>
-                            <span *ngIf="!TnCsagreementComplete" class="agreementCross">X</span>                            
-                        </h3>
-                    </ng-template>
-                    <ng-template ngbPanelContent>
-                        <div class="agreement">
-                                {{ agreementBody }}
-                                <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete)"><strong> I Agree I have read the document.</strong>
-                                </label>
-                            </div>
-                        </div>
-                    </ng-template>                        
-            </ngb-panel>
-            <ngb-panel>
-                <ng-template ngbPanelTitle>
-                        <h3>
-                            HP
-                            <span *ngIf="HPagreementComplete"  class="agreementTick">&#10004;</span>
-                            <span *ngIf="!HPagreementComplete" class="agreementCross">X</span>                            
-                        </h3>
-                    </ng-template>
-                    <ng-template ngbPanelContent>
-                        <div class="agreement">
-                                {{ agreementBody }}
-                                <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete)"><strong> I Agree I have read the document.</strong>
-                                </label>
-                            </div>
-                        </div>
-                    </ng-template>                        
-            </ngb-panel>
-            <ngb-panel>
-                <ng-template ngbPanelTitle>
-                        <h3>
-                            DDM
-                            <span *ngIf="DDMagreementComplete"  class="agreementTick">&#10004;</span>
-                            <span *ngIf="!DDMagreementComplete" class="agreementCross">X</span>                            
-                        </h3>
-                    </ng-template>
-                    <ng-template ngbPanelContent>
-                        <div class="agreement">
-                                {{ agreementBody }}
-                                <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" [checked]="DDMagreementComplete" (change)="setDDMagreement(!DDMagreementComplete)"><strong> I Agree I have read the document.</strong>
-                                </label>
-                            </div>
-                        </div>
-<<<<<<< Updated upstream
-                    </ng-template>                        
-            </ngb-panel>
-        </ngb-accordion>
-    </div>
-    <div class="col-md-2">
-        <button class="btn"
-            [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
-            [attr.disabled]="!completeButtonEnabled == true ? true : null"
-            (click)="complete()">Click and Complete</button>
-    </div>
-</div>
+    <h1>Time to sign your agreements</h1>
+    <br/>
+    <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion">
+        <ngb-panel id="secciPanel">
+            <ng-template ngbPanelTitle>
+                <div class="accordion-text">
+                        <span class="fa fa-info-circle"></span>
+                    Pre Contract Information
+                    <button class="btn agreementButton" [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }">
+                                {{ !SECCIagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'secciPanel' ? '&#9650;' : '&#9660;' }}</button>
+                    <span *ngIf="SECCIagreementComplete" class="agreementTick">&#10004;</span>
+                </div>
 
-=======
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <div class="agreement">
+                    {{ agreementBody }}
+                    <div>
+                        <strong>Signed:</strong>
+                        <div class="card text-center" style="height: 76px;">
+                            <div class="card-body">
+                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ SECCIagreementComplete ? 'J. Bloggs' : '' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete, acc)"><strong> I Agree I have read the document.</strong>
+                        </label>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-panel>
+        <ngb-panel [disabled]="!SECCIagreementComplete" id="tncPanel">
+            <ng-template ngbPanelTitle>
+                <div class="accordion-text">
+                    Terms & Conditions
+                    <button class="btn agreementButton" [ngClass]="{
+                                    'btn-success': SECCIagreementComplete && !TnCsagreementComplete,
+                                    'btn-light': TnCsagreementComplete,
+                                    'btn-secondary': !SECCIagreementComplete }">
+                                {{ !TnCsagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'tncPanel' ? '&#9650;' : '&#9660;' }}</button>
+                    <span *ngIf="TnCsagreementComplete" class="agreementTick">&#10004;</span>
+                </div>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <div class="agreement">
+                    {{ agreementBody }}
+                    <div>
+                        <strong>Signed:</strong>
+                        <div class="card text-center" style="height: 76px;">
+                            <div class="card-body">
+                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ TnCsagreementComplete ? 'J. Bloggs' : '' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                                    <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete, acc)"><strong> I Agree I have read the document.</strong>
+                                </label>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-panel>
+        <ngb-panel [disabled]="!TnCsagreementComplete" id="hpPanel">
+            <ng-template ngbPanelTitle>
+                <div class="accordion-text">
+                    Hire Purchase Agreement
+                    <button class="btn agreementButton" [ngClass]="{
+                                'btn-success': TnCsagreementComplete && !HPagreementComplete,
+                                'btn-light': HPagreementComplete,
+                                'btn-secondary': !TnCsagreementComplete }">
+                            {{ !HPagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'hpPanel' ? '&#9650;' : '&#9660;' }}</button>
+                    <span *ngIf="HPagreementComplete" class="agreementTick">&#10004;</span>
+                </div>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <div class="agreement">
+                    {{ agreementBody }}
+                    <div>
+                        <strong>Signed:</strong>
+                        <div class="card text-center" style="height: 76px;">
+                            <div class="card-body">
+                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ HPagreementComplete ? 'J. Bloggs' : '' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                                    <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete, acc)"><strong> I Agree I have read the document.</strong>
+                                </label>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-panel>
+        <ngb-panel [disabled]="!HPagreementComplete" id="ddmPanel">
+            <ng-template ngbPanelTitle>
+                <div class="accordion-text">
+                    Direct Debit Mandate
+                    <button class="btn agreementButton" [ngClass]="{
+                                'btn-success': HPagreementComplete && !DDMagreementComplete,
+                                'btn-light': DDMagreementComplete,
+                                'btn-secondary': !HPagreementComplete }">
+                            {{ !DDMagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'ddmPanel' ? '&#9650;' : '&#9660;' }}</button>
+                    <span *ngIf="DDMagreementComplete" class="agreementTick">&#10004;</span>
+                </div>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <div class="agreement">
+                    {{ agreementBody }}
+                    <div>
+                        <strong>Signed:</strong>
+                        <div class="card text-center" style="height: 76px;">
+                            <div class="card-body">
+                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ DDMagreementComplete ? 'J. Bloggs' : '' }}</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="checkbox">
                         <label>
@@ -110,5 +134,4 @@
     <button class="btn" [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
         [attr.disabled]="!completeButtonEnabled == true ? true : null" (click)="complete()">Click and Complete</button>
         <br />
->>>>>>> Stashed changes
 </div>

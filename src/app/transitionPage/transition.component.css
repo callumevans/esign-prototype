@@ -2,3 +2,37 @@
     color: white;
     background: #422d6e !important;
 }
+
+.spinner-container {
+    margin: -35px;
+}
+
+.fa{
+    color: #b1da5c;
+    position: relative;
+    font-size: 100px;
+    position: relative;
+    top: 131px;
+    z-index: 1;
+}
+img{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    top: -41px;
+    position: relative;
+    z-index: 0;
+}
+
+h1,h2,h3{
+    color:white;
+}
+
+h1{
+    font-weight: 800;
+}
+.display-10 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+}

@@ -13,24 +13,37 @@
 }
 body {
     background-color:#422d6e;
+    font-family: Lato,sans-serif;
 }
 
 nav{
     background: linear-gradient(to right, #23313E, #362460);
     color:white;
     z-index: 1;
-}
-.container {
-    background-color:white;
-    padding: 25px;
-    margin:0 auto;
-    
-    margin-top: 20px;
-    width: inherit;
+    padding: 5px 20px;
 }
 .company-name {
     float: right;
     margin-right:20px;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 26px;
+}
+
+h1, h2, h3{
+    color: #F6F6F9;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container {
+    color: white !important;
+    padding: 0 25px;
+    margin:0 auto;
+    
+    margin-top: 20px;
+    width: inherit;
+    border-radius: 7px;
+    text-align: center;
 }
