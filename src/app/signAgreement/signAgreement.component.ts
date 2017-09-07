@@ -14,6 +14,8 @@ import { LoremIpsum } from 'app/signAgreement/loremIpsum';
     TnCsagreementComplete = false;
     HPagreementComplete = false;
     DDMagreementComplete = false;
+    timeout: any; // NodeJS.Timer;
+    accordion: any;
 
     complete(): void {
       if (this.completeButtonEnabled) {
@@ -21,31 +23,23 @@ import { LoremIpsum } from 'app/signAgreement/loremIpsum';
       }
     }
 
-    setSECCIagreement(val): void {
+    setSECCIagreement(val, acc): void {
       this.SECCIagreementComplete = val;
-      this.enableContinueButton();
+      this.timeout = setTimeout(() => acc.toggle('tncPanel'), 500);
     }
 
-    setTnCsagreement(val): void {
+    setTnCsagreement(val, acc): void {
       this.TnCsagreementComplete = val;
-      this.enableContinueButton();
+      this.timeout = setTimeout(() => acc.toggle('hpPanel'), 500);
     }
 
-    setHPagreement(val): void {
+    setHPagreement(val, acc): void {
       this.HPagreementComplete = val;
-      this.enableContinueButton();
+      this.timeout = setTimeout(() => acc.toggle('ddmPanel'), 500);
     }
 
     setDDMagreement(val): void {
       this.DDMagreementComplete = val;
-      this.enableContinueButton();
-    }
-
-    enableContinueButton(): void {
-      this.completeButtonEnabled =
-          this.SECCIagreementComplete &&
-          this.TnCsagreementComplete &&
-          this.HPagreementComplete &&
-          this.DDMagreementComplete;
+      this.completeButtonEnabled = val;
     }
 }

@@ -1,7 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Observable } from 'rxjs/Rx';
-
 @Component({
     selector: 'transition',
     templateUrl: 'transition.component.html',
