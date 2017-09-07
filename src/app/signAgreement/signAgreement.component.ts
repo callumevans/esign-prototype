@@ -19,12 +19,6 @@ export class SignAgreementComponent {
 
   panelDelay = 750;
 
-  complete(): void {
-    if (this.completeButtonEnabled) {
-      location.href = '/completeAgreement';
-    }
-  }
-
   setSECCIagreement(val, acc): void {
     this.SECCIagreementComplete = val;
     this.timeout = setTimeout(() => acc.toggle('tncPanel'), this.panelDelay);
