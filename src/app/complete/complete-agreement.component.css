@@ -2,10 +2,10 @@ h1 {
     margin-bottom: 15px;
 }
 .check-icon {
-    font-size:48px;
-    color:#b1da5c;
+    font-size: 64px;
+    color: #b1da5c;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .button-container{
