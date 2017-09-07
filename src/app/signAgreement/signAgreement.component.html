@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="display-1">Sign your agreements</h1>
+    <h1>Sign your agreements</h1>
     <br/>
     <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion">
         <ngb-panel id="secciPanel">
@@ -130,7 +130,7 @@
         </ngb-panel>
     </ngb-accordion>
     <br/>
-    <button class="btn btn-block" [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
+    <button class="btn" [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
         [attr.disabled]="!completeButtonEnabled == true ? true : null" (click)="complete()">Click and Complete</button>
 
 </div>
