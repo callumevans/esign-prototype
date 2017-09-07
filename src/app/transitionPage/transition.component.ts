@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'transition',
@@ -11,12 +12,16 @@ export class TransitionComponent implements OnInit, OnDestroy {
 
     timeout: any; //NodeJS.Timer;
 
+    constructor(private router: Router) {
+
+    }
+
     ngOnInit() {
         this.timeout = setTimeout(() => this.changePage(), 5000);
     }
 
     changePage(): void {
-        location.href = '/home';
+        this.router.navigate(['home']);
     }
 
     ngOnDestroy() {
