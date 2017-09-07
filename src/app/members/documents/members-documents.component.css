@@ -4,8 +4,10 @@
     width: 576px;
     display: block;
     position: relative;
-    top: -44px;
+    top: -33px;
     margin: 0 auto;
+    border: 3px solid white;
+    border-radius: 7px;
 }
 
 .sign-btn {

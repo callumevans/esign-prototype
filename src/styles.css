@@ -23,6 +23,7 @@ nav{
     background: linear-gradient(to right, #23313E, #362460);
     color:white;
     z-index: 1;
+    padding: 5px 20px;
 }
 .container {
     background-color:white;
@@ -31,10 +32,11 @@ nav{
     
     margin-top: 20px;
     width: inherit;
+    border-radius: 7px;
 }
 .company-name {
     float: right;
     margin-right:20px;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 26px;
 }

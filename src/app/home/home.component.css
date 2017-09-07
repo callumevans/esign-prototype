@@ -1,15 +1,13 @@
-.summary{
+.summary {
     padding: 15px;
 }
 .summary .card{
     background: #d8ebfb;
-    text-align: center;
-}
-
-.fa-info-circle {
-    cursor:pointer;
 }
 
 h3 {
     font-size: 22px;
+}
+.btn {
+    margin-top: 10px;
 }
