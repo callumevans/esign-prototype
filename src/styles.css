@@ -22,6 +22,9 @@ nav{
     z-index: 1;
     padding: 5px 20px;
 }
+.navbar-brand img{
+    width: 60px;
+}
 .company-name {
     float: right;
     margin-right:20px;
@@ -42,7 +45,7 @@ h1, h2, h3{
     padding: 0 25px;
     margin:0 auto;
     
-    margin-top: 15px;
+    margin-top: 10px;
     width: inherit;
     border-radius: 7px;
     text-align: center;
