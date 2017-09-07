@@ -17,6 +17,7 @@
 }
 body {
     background-color:#422d6e;
+    font-family: Lato,sans-serif;
 }
 
 nav{
@@ -43,4 +44,8 @@ nav{
 
 h1, h2, h3{
     color: #30225d;
+}
+
+.text-center{
+    text-align: center;
 }
