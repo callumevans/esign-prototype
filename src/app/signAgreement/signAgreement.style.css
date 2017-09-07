@@ -8,12 +8,16 @@
     color: #0C0;
 }
 
-.agreementCross{
+.agreementButton{
     float: right;
-    color: #C00;
 }
 
 h3 {
     color: #30225d;
+    text-align: left;
+}
+
+.agreement{
+    color: black;
     text-align: left;
 }
