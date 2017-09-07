@@ -2,3 +2,24 @@
     color: white;
     background: #422d6e !important;
 }
+
+.spinner-container {
+
+}
+
+.fa{
+    color: #34de34;
+    position: relative;
+    font-size: 100px;
+    position: relative;
+    top: 131px;
+    z-index: 1;
+}
+img{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    top: -41px;
+    position: relative;
+    z-index: 0;
+}
