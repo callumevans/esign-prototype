@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoremIpsum } from 'app/signAgreement/loremIpsum';
+import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'sign-agreement',
@@ -17,30 +18,44 @@ export class SignAgreementComponent {
   panelDelay = 750;
   timeout: any;
 
-  enableContinueButton(): void {
-    this.completeButtonEnabled =
-      this.SECCIagreementComplete &&
-      this.TnCsagreementComplete &&
-      this.HPagreementComplete &&
-      this.DDMagreementComplete;
-  }
+    panelLock = true;
+
+    public beforeChange($event: NgbPanelChangeEvent) {
+      if (this.panelLock) {
+        $event.preventDefault();
+      }
+
+      this.panelLock = true;
+    }
+
+    enableContinueButton(): void {
+      this.completeButtonEnabled =
+          this.SECCIagreementComplete &&
+          this.TnCsagreementComplete &&
+          this.HPagreementComplete &&
+          this.DDMagreementComplete;
+    }
   setSECCIagreement(val, acc): void {
     this.SECCIagreementComplete = val;
+    this.panelLock = false;
     this.timeout = setTimeout(() => acc.toggle('tncPanel'), this.panelDelay);
   }
 
   setTnCsagreement(val, acc): void {
     this.TnCsagreementComplete = val;
+    this.panelLock = false;
     this.timeout = setTimeout(() => acc.toggle('hpPanel'), this.panelDelay);
   }
 
   setHPagreement(val, acc): void {
     this.HPagreementComplete = val;
+    this.panelLock = false;
     this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
   }
 
   setDDMagreement(val, acc): void {
     this.DDMagreementComplete = val;
+    this.panelLock = false;
     this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
     this.completeButtonEnabled = val;
   }
