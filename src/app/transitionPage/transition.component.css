@@ -4,11 +4,11 @@
 }
 
 .spinner-container {
-
+    margin: -35px;
 }
 
 .fa{
-    color: #8aba26;
+    color: #b1da5c;
     position: relative;
     font-size: 100px;
     position: relative;
@@ -26,4 +26,13 @@ img{
 
 h1,h2,h3{
     color:white;
+}
+
+h1{
+    font-weight: 800;
+}
+.display-10 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.1;
 }

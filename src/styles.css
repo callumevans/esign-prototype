@@ -26,15 +26,6 @@ nav{
     z-index: 1;
     padding: 5px 20px;
 }
-.container {
-    background-color:white;
-    padding: 25px;
-    margin:0 auto;
-    
-    margin-top: 20px;
-    width: inherit;
-    border-radius: 7px;
-}
 .company-name {
     float: right;
     margin-right:20px;
@@ -43,9 +34,20 @@ nav{
 }
 
 h1, h2, h3{
-    color: #30225d;
+    color: #F6F6F9;
 }
 
 .text-center{
+    text-align: center;
+}
+
+.container {
+    color: white !important;
+    padding: 0 25px;
+    margin:0 auto;
+    
+    margin-top: 20px;
+    width: inherit;
+    border-radius: 7px;
     text-align: center;
 }
