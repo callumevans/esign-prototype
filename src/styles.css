@@ -8,12 +8,6 @@
     cursor: pointer;
 }
 
-.btn-purple {
-    border: 1px solid white;
-    background: #5a4092;
-    /* background-color: #3F0080; */
-    color: white;
-}
 .btn-success{
     background-color:#79ba30;
 }

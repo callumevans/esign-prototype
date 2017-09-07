@@ -2,23 +2,34 @@ import { Component } from '@angular/core';
 import { LoremIpsum } from 'app/signAgreement/loremIpsum';
 
 @Component({
-  selector: 'sign-agreement',
-  templateUrl: 'signAgreement.component.html',
-  styleUrls: ['./signAgreement.style.css']
-})
+    selector: 'sign-agreement',
+    templateUrl: 'signAgreement.component.html',
+    styleUrls: ['./signAgreement.style.css']
+  })
 
-export class SignAgreementComponent {
-  agreementBody = LoremIpsum.text;
-  completeButtonEnabled = false;
-  SECCIagreementComplete = false;
-  TnCsagreementComplete = false;
-  HPagreementComplete = false;
-  DDMagreementComplete = false;
-  timeout: any; // NodeJS.Timer;
-  accordion: any;
+  export class SignAgreementComponent {
+    agreementBody = LoremIpsum.text;
+    completeButtonEnabled = false;
+    SECCIagreementComplete = false;
+    TnCsagreementComplete = false;
+    HPagreementComplete = false;
+    DDMagreementComplete = false;
+    panelDelay = 500;
+    timeout: any;
 
-  panelDelay = 750;
+    complete(): void {
+      if (this.completeButtonEnabled) {
+        location.href = '/completeAgreement';
+      }
+    }
 
+    enableContinueButton(): void {
+      this.completeButtonEnabled =
+          this.SECCIagreementComplete &&
+          this.TnCsagreementComplete &&
+          this.HPagreementComplete &&
+          this.DDMagreementComplete;
+    }
   setSECCIagreement(val, acc): void {
     this.SECCIagreementComplete = val;
     this.timeout = setTimeout(() => acc.toggle('tncPanel'), this.panelDelay);
@@ -34,8 +45,9 @@ export class SignAgreementComponent {
     this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
   }
 
-  setDDMagreement(val): void {
+  setDDMagreement(val, acc): void {
     this.DDMagreementComplete = val;
+    this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
     this.completeButtonEnabled = val;
   }
 }

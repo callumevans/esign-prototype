@@ -124,7 +124,7 @@
                             <input
                                 type="checkbox"
                                 [checked]="DDMagreementComplete"
-                                (change)="setDDMagreement(!DDMagreementComplete)" />
+                                (change)="setDDMagreement(!DDMagreementComplete, acc)" />
                                 <strong> I Agree I have read the document.</strong>
                         </label>
                     </div>
@@ -135,5 +135,5 @@
     <br/>
     <button class="btn" [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
         [attr.disabled]="!completeButtonEnabled == true ? true : null" routerLink="/completeAgreement">Click and Complete</button>
-
+        <br />
 </div>

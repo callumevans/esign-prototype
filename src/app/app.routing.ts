@@ -4,17 +4,13 @@ import { HomeComponent } from 'app/home/home.component';
 import { SignAgreementComponent } from 'app/signAgreement/signAgreement.component';
 import { CompleteAgreementComponent } from 'app/complete/complete.component';
 import { TransitionComponent } from 'app/TransitionPage/transition.component';
-import { MembersHomeComponent } from "app/members/home/members-home.component";
-import { MembersDocumentsComponent } from "app/members/documents/members-documents.component";
+import { MembersHomeComponent } from 'app/members/home/members-home.component';
+import { MembersDocumentsComponent } from 'app/members/documents/members-documents.component';
 
 const appRoutes: Routes = [
     {
         path: 'home',
         component: HomeComponent
-    },
-    {
-        path: 'members-home',
-        component: MembersHomeComponent
     },
     {
         path: 'members-documents',
@@ -34,7 +30,7 @@ const appRoutes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'members-home',
+        redirectTo: 'members-documents',
         pathMatch: 'full'
     }
 ];
