@@ -31,10 +31,11 @@ nav{
     
     margin-top: 20px;
     width: inherit;
+    border-radius: 7px;
 }
 .company-name {
     float: right;
     margin-right:20px;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 26px;
 }
