@@ -1,12 +1,21 @@
 <div class="container">
     
-    <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion">
+    <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion" (panelChange)="beforeChange($event)">
         <ngb-panel id="secciPanel">
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
-                    <span class="fa fa-info-circle"></span>
+                    <span
+                        class="fa fa-info-circle"
+                        placement="right"
+                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        triggers="mouseenter:mouseleave"
+                        popoverTitle="Pre Contract Information">
+                    </span>
                     Pre Contract Information
-                    <button class="btn agreementButton" [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }">
+                    <button
+                        class="btn agreementButton"
+                        [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }"
+                        (click)="panelLock = false;">
                                 {{ !SECCIagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'secciPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="SECCIagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
@@ -34,12 +43,19 @@
         <ngb-panel [disabled]="!SECCIagreementComplete" id="tncPanel">
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
-                    <span class="fa fa-info-circle"></span>
+                    <span
+                        class="fa fa-info-circle"
+                        placement="right"
+                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        triggers="mouseenter:mouseleave"                        
+                        popoverTitle="Terms and Conditions Information">
+                    </span>
                     Terms & Conditions
                     <button class="btn agreementButton" [ngClass]="{
                                     'btn-success': SECCIagreementComplete && !TnCsagreementComplete,
                                     'btn-light': TnCsagreementComplete,
-                                    'btn-secondary': !SECCIagreementComplete }">
+                                    'btn-secondary': !SECCIagreementComplete }"
+                                    (click)="panelLock = false;">
                                 {{ !TnCsagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'tncPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="TnCsagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
@@ -66,12 +82,18 @@
         <ngb-panel [disabled]="!TnCsagreementComplete" id="hpPanel">
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
-                    <span class="fa fa-info-circle"></span>
-                    Hire Purchase Agreement
+                    <span
+                        class="fa fa-info-circle"
+                        placement="right"
+                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        triggers="mouseenter:mouseleave"                        
+                        popoverTitle="Pre Contract Information">
+                    </span>                    Hire Purchase Agreement
                     <button class="btn agreementButton" [ngClass]="{
                                 'btn-success': TnCsagreementComplete && !HPagreementComplete,
                                 'btn-light': HPagreementComplete,
-                                'btn-secondary': !TnCsagreementComplete }">
+                                'btn-secondary': !TnCsagreementComplete }"
+                                (click)="panelLock = false;">
                             {{ !HPagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'hpPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="HPagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
@@ -98,12 +120,18 @@
         <ngb-panel [disabled]="!HPagreementComplete" id="ddmPanel">
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
-                    <span class="fa fa-info-circle"></span>
-                    Direct Debit Mandate
+                    <span
+                        class="fa fa-info-circle"
+                        placement="right"
+                        ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        triggers="mouseenter:mouseleave"                        
+                        popoverTitle="Pre Contract Information">
+                    </span>                    Direct Debit Mandate
                     <button class="btn agreementButton" [ngClass]="{
                                 'btn-success': HPagreementComplete && !DDMagreementComplete,
                                 'btn-light': DDMagreementComplete,
-                                'btn-secondary': !HPagreementComplete }">
+                                'btn-secondary': !HPagreementComplete }"
+                                (click)="panelLock = false;">
                             {{ !DDMagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'ddmPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="DDMagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
