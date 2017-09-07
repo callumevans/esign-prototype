@@ -24,3 +24,16 @@ h3 {
     color: black;
     text-align: left;
 }
+
+.accordion-text {
+    line-height: 35px;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+  }
+
+  .accordion-text .fa {
+    padding-right: 8px;
+    color: #06aeff;
+    font-size: 1.2em;
+  }

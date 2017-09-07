@@ -14,6 +14,11 @@
     padding: 0.2em;
     font-size: 1.2em;
 }
+.pound {
+    padding-right: 5px;
+    font-weight: bold;
+}
+
 .fa {
     padding-right: 5px;
 }

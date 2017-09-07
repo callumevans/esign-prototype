@@ -1,15 +1,16 @@
 <div class="container">
-    <h1>Sign your agreements</h1>
+    <h1>Time to sign your agreements</h1>
     <br/>
     <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion">
         <ngb-panel id="secciPanel">
             <ng-template ngbPanelTitle>
-                <h3>
-                    SECCI
+                <div class="accordion-text">
+                        <span class="fa fa-info-circle"></span>
+                    Pre Contract Information
                     <button class="btn agreementButton" [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }">
                                 {{ !SECCIagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'secciPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="SECCIagreementComplete" class="agreementTick">&#10004;</span>
-                </h3>
+                </div>
 
             </ng-template>
             <ng-template ngbPanelContent>
@@ -33,15 +34,15 @@
         </ngb-panel>
         <ngb-panel [disabled]="!SECCIagreementComplete" id="tncPanel">
             <ng-template ngbPanelTitle>
-                <h3>
-                    T&Cs
+                <div class="accordion-text">
+                    Terms & Conditions
                     <button class="btn agreementButton" [ngClass]="{
                                     'btn-success': SECCIagreementComplete && !TnCsagreementComplete,
                                     'btn-light': TnCsagreementComplete,
                                     'btn-secondary': !SECCIagreementComplete }">
                                 {{ !TnCsagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'tncPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="TnCsagreementComplete" class="agreementTick">&#10004;</span>
-                </h3>
+                </div>
             </ng-template>
             <ng-template ngbPanelContent>
                 <div class="agreement">
@@ -64,15 +65,15 @@
         </ngb-panel>
         <ngb-panel [disabled]="!TnCsagreementComplete" id="hpPanel">
             <ng-template ngbPanelTitle>
-                <h3>
-                    HP
+                <div class="accordion-text">
+                    Hire Purchase Agreement
                     <button class="btn agreementButton" [ngClass]="{
                                 'btn-success': TnCsagreementComplete && !HPagreementComplete,
                                 'btn-light': HPagreementComplete,
                                 'btn-secondary': !TnCsagreementComplete }">
                             {{ !HPagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'hpPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="HPagreementComplete" class="agreementTick">&#10004;</span>
-                </h3>
+                </div>
             </ng-template>
             <ng-template ngbPanelContent>
                 <div class="agreement">
@@ -95,15 +96,15 @@
         </ngb-panel>
         <ngb-panel [disabled]="!HPagreementComplete" id="ddmPanel">
             <ng-template ngbPanelTitle>
-                <h3>
-                    DDM
+                <div class="accordion-text">
+                    Direct Debit Mandate
                     <button class="btn agreementButton" [ngClass]="{
                                 'btn-success': HPagreementComplete && !DDMagreementComplete,
                                 'btn-light': DDMagreementComplete,
                                 'btn-secondary': !HPagreementComplete }">
                             {{ !DDMagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'ddmPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="DDMagreementComplete" class="agreementTick">&#10004;</span>
-                </h3>
+                </div>
             </ng-template>
             <ng-template ngbPanelContent>
                 <div class="agreement">
