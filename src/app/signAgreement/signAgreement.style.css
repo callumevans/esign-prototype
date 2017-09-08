@@ -35,4 +35,11 @@ h3 {
     padding-right: 8px;
     color: #06aeff;
     font-size: 1.2em;
+    cursor: pointer;
+  }
+  .accordion-text:hover {
+      cursor: default !important;
+  }
+  .tab a {
+    cursor: default !important;    
   }
