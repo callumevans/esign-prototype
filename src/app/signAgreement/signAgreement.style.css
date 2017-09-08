@@ -61,9 +61,10 @@ h3 {
       margin: 0 auto;
   }
 
-  .checkbox{
-      margin-top: 10px;
-  }
+.checkbox{
+    text-align: center;
+    margin-top: 10px;
+}
   .checkbox strong{
       font-size: 18px;
   }
