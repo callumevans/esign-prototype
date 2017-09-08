@@ -60,3 +60,7 @@ h3 {
       width: 150px;
       margin: 0 auto;
   }
+
+  .checkbox strong{
+      font-size: 18px;
+  }
