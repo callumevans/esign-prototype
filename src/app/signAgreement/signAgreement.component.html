@@ -5,14 +5,19 @@
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
                         Pre Contract Information                        
-                    <span
+                    <!-- <span
                         class="fa fa-info-circle"
                         placement="right"
                         ngbPopover="The PCI is a standardised form designed to show you exactly what your finance agreement contains.
                                     The form will include key details such as type of credit, Annual Percentage Rate (APR), number and frequency of payments, and total amount owed."
                         triggers="mouseenter:mouseleave"
                         popoverTitle="Pre Contract Information">
-                    </span>
+                    </span> -->
+                    
+                    <span
+                    class="fa fa-info-circle"
+                    (click)="open(modal1)"></span>
+                    
                     <button
                         class="btn agreementButton"
                         [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }"
@@ -50,14 +55,26 @@
                 <div class="accordion-text">
                         Terms & Conditions
                         
-                    <span
+                    <!-- <span
                         class="fa fa-info-circle"
                         placement="right"
                         ngbPopover="Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as ToS or ToS and ToU) are rules by which one must agree to abide in order to use a service.
                             Terms of service can also be merely a disclaimer, especially regarding the use of websites."
                         triggers="mouseenter:mouseleave"                        
                         popoverTitle="Terms and Conditions Information">
-                    </span>
+                    </span> -->
+<!--                     
+                    <span
+                        class="fa fa-info-circle"
+                        (click)="open('Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as ToS or ToS and ToU) are rules by which one must agree to abide in order to use a service.
+                            Terms of service can also be merely a disclaimer, especially regarding the use of websites.')"
+                        popoverTitle="Terms and Conditions Information">
+                    </span> -->
+                    
+                    <span
+                    class="fa fa-info-circle"
+                    (click)="open(modal2)"></span>
+                    
                     <button class="btn agreementButton" [ngClass]="{
                                     'btn-success': SECCIagreementComplete && !TnCsagreementComplete,
                                     'btn-light': TnCsagreementComplete,
@@ -96,14 +113,19 @@
                 <div class="accordion-text">
                         Hire Purchase Agreement
                         
-                    <span
+                    <!-- <span
                         class="fa fa-info-circle"
                         placement="right"
                         ngbPopover="If you choose to pay for your car with a Hire Purchase agreement, you will normally pay an initial deposit and will pay off the entire value of the car in monthly instalments.
                             When all the payments are made, the Hire Purchase agreement ends and you own the car."
                         triggers="mouseenter:mouseleave"                        
                         popoverTitle="Hire Purchase Agreement">
-                    </span>
+                    </span> -->
+                    
+                    <span
+                    class="fa fa-info-circle"
+                    (click)="open(modal3)"></span>
+
                     <button class="btn agreementButton" [ngClass]="{
                                 'btn-success': TnCsagreementComplete && !HPagreementComplete,
                                 'btn-light': HPagreementComplete,
@@ -143,14 +165,18 @@
                 <div class="accordion-text">
                         Direct Debit Mandate
                         
-                    <span
+                    <!-- <span
                         class="fa fa-info-circle"
                         placement="right"
                         ngbPopover="A Direct Debit Instruction is an authorisation from your customer to collect future payments.
                             The details of each authorisation are standardised: All future payments are authorised so you can collect any amount at any time from your customer."
                         triggers="mouseenter:mouseleave"                        
                         popoverTitle="Direct Debit Mandate">
-                    </span>
+                    </span> -->
+
+                    <span
+                        class="fa fa-info-circle"
+                        (click)="open(modal4)"></span>
                     <button class="btn agreementButton" [ngClass]="{
                                 'btn-success': HPagreementComplete && !DDMagreementComplete,
                                 'btn-light': DDMagreementComplete,
@@ -191,3 +217,71 @@
         [attr.disabled]="!completeButtonEnabled == true ? true : null" routerLink="/completeAgreement">Click and Complete</button>
         <br />
 </div>
+
+
+
+
+<ng-template #modal1 let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Pre-Contract Agreement</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>The PCI is a standardised form designed to show you exactly what your finance agreement contains.
+            The form will include key details such as type of credit, Annual Percentage Rate (APR), number and frequency of payments, and total amount owed</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+      
+<ng-template #modal2 let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Terms & Conditions</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as ToS or ToS and ToU) are rules by which one must agree to abide in order to use a service.
+                Terms of service can also be merely a disclaimer, especially regarding the use of websites.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #modal3 let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Hire Purchase Agreement</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>If you choose to pay for your car with a Hire Purchase agreement, you will normally pay an initial deposit and will pay off the entire value of the car in monthly instalments.
+                When all the payments are made, the Hire Purchase agreement ends and you own the car.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #modal4 let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Direct Debit Mandate</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>A Direct Debit Instruction is an authorisation from your customer to collect future payments.
+                The details of each authorisation are standardised: All future payments are authorised so you can collect any amount at any time from your customer.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
