@@ -53,3 +53,10 @@ h3 {
   .btn:disabled {
       cursor: not-allowed;
   }
+
+  .btn-block{
+      margin-bottom: 20px !important;
+      margin-top: 10px !important;
+      width: 150px;
+      margin: 0 auto;
+  }
