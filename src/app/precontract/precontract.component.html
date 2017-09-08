@@ -1,0 +1,241 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <th colspan="2">1. Contact Details</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Creditor</td>
+                <td>{{ precontractInfo.creditor }}</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>{{ precontractInfo.creditorAddress }}</td>
+            </tr>
+            <tr>
+                <td>Telephone Number</td>
+                <td>{{ precontractInfo.creditorNumber }}</td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>{{ precontractInfo.creditorEmail }}</td>
+            </tr>
+            <tr>
+                <td>Web Address</td>
+                <td>{{ precontractInfo.creditorUrl }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <th colspan="2">2. Key Features of the credit product</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The type of credit</td>
+                <td>Hire Purchase Agreement (the "Agreement")</td>
+            </tr>
+            <tr>
+                <td>The total amount of credit.
+                    This means the amount of credit to be provided under the proposed credit agreement or the credit limit.
+                    </td>
+                <td>{{ precontractInfo.amountOfCredit }}</td>
+            </tr>
+            <tr>
+                <td>How and when credit would be provided.</td>
+                <td>{{ precontractInfo.duration }} monthly payments of £{{ precontractInfo.monthlyRepayment }} the first payable on {{ precontractInfo.initialPaymentDate | date:"dd/MM/yyyy" }}, and monthly thereafter on the same day of the month. 
+                    The Option to Purchase Fee will be added to and is payable with the final payment. 
+                    The Administration Fee is spread over the term of the Agreement and will attract interest at the contract rate - a part of it is collected with each payment.</td>
+            </tr>
+            <tr>
+                <td>The duration of the credit agreement.</td>
+                <td>{{ precontractInfo.duration }} months</td>
+            </tr>
+            <tr>
+                <td>Repayments</td>
+                <td>When you sign the Agreement we will make a payment of an amount equal to the Amount of Credit on the same day to the supplier of the Vehicle.</td>
+            </tr>
+            <tr>
+                <td>
+                    The total amount you will have to pay:<br/>
+                </td>
+                <td>
+                    {{ precontractInfo.totalToRepay }}<br/>
+                </td>
+            </tr>
+            <tr>
+                <td>This means the amount you will have borrowed plus interest and other costs. Made up of:</td>
+                <td>
+                    <table class="table">
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td>Deposit(including cash or part exchange)</td>
+                                <td>{{ precontractInfo.deposit }}</td>
+                            </tr>
+                            <tr>
+                                <td>Total amount of credit</td>
+                                <td>{{ precontractInfo.amountOfCredit }}</td>
+                            </tr>
+                            <tr>
+                                <td>Administration Fee</td>
+                                <td>{{ precontractInfo.adminFee }}</td>
+                            </tr>
+                            <tr>
+                                <td>Interest</td>
+                                <td>{{ precontractInfo.interest }}</td>
+                            </tr>
+                            <tr>
+                                <td>Optional Option to Purchase fee</td>
+                                <td>{{ precontractInfo.optionToPurchaseFee }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    The proposed credit will be linked to the supply of specific goods or the provision of a service.
+                        Description of goods/services
+                </td>
+                <td>
+                    <p>Vehicle Registration: {{ precontractInfo.regNumber }}</p>
+                    <p>Description: {{ precontractInfo.vehicleDescription }}</p>
+                    <p>Chassis/Serial Number: {{ precontractInfo.chassisNumber }}</p>
+                    <p>Date of first registration: {{ precontractInfo.vehicleRegDate | date:"dd/MM/yyyy"}}</p>
+                    <p>Cash Price: {{ precontractInfo.vehiclePrice }}</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <th colspan="2">3. Costs of the credit</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The rate of interest which apply to the credit agreement.</td>
+                <td>{{ precontractInfo.interestRate }}% p.a. fixed throughout the period of the Agreement.</td>
+            </tr>
+            <tr>
+                <td>Annual Percentage Rate of Charge (APR)
+                    This is the total cost expressed as an annual percentage of the total amount of credit.
+                    The APR is there to help you compare different offers.
+                </td>
+                <td>
+                    {{ precontractInfo.hpApr }}%
+                </td>
+            </tr>
+            <thead>
+                <th colspan="2">Related Costs</th>
+            </thead>
+            <tr>
+                <td>
+                    Costs in the case of late payments.
+                </td>
+                <td>
+                    <p>Please find below a list of charges payable or applicable under the agreement (charges ex VAT):</p>
+                    <table class="table">
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td>Direct Debit Returned Unpaid Letter</td>
+                                <td>£10</td>
+                            </tr>
+                            <tr>
+                                <td>Cancelled Direct Debit Mandate Letter where you have not provided us with advance notice of the cancellation</td>
+                                <td>£10</td>
+                            </tr>
+                            <tr>
+                                <td>Statutory Notice of Default</td>
+                                <td>£10</td>
+                            </tr>
+                            <tr>
+                                <td>Termination Notice</td>
+                                <td>£10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>We may also charge our reasonable costs incurred if we repossess the Vehicle.</p>
+                    <p>We may vary the charges at any time in the future as a result of regulatory requirements, economic circumstances or any other valid reason outside of our control. We will let you know about any change before it takes effect.</p>
+                    <p>You may also have to pay other charges in accordance with clause 3.1(i) of the terms and conditions.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Consequences of missing payments.</td>
+                <td>
+                    <p>If you fail to make any payment when due under this Agreement:</p>
+                    <ol>
+                        <li>Further charges may become payable – a list of our fixed charges is provided above.</li>
+                        <li>This Agreement may be terminated in which case the vehicle may be repossessed and you may still have a financial liability to us.</li>
+                        <li>Court action could be taken against you.</li>
+                        <li>A record of default will be sent to credit reference agencies and this could make it more difficult to obtain credit in future.</li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <th colspan="2">4. Other important legal aspects</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Right of Withdrawal</td>
+                <td>You have the right to withdraw from the Agreement before the end of 14 days beginning with the day after the day on which we advise you that the Agreement has been made.</td>
+            </tr>
+            <tr>
+                <td>Early repayment</td>
+                <td>You have the right to repay the credit early at any time in full or partially. If you do make a partial settlement, we will contact you and, taking effect from the next payment date, you may choose to either (i) reduce the amount of your future payments but keep the term of the Agreement the same or (ii) reduce the term of the Agreement but keep the amount of your future payments the same. Any part settlement will be applied against arrears and charges before reducing future payments.</td>
+            </tr>
+            <tr>
+                <td>Consultation with a Credit Reference Agency</td>
+                <td>If we decide not to proceed with the Agreement on the basis of information received from a credit reference agency, we will notify you of our decision and will inform you that it has been reached on the basis of such information and of the particulars of the agency.</td>
+            </tr>
+            <tr>
+                <td>Right to a draft credit agreement</td>
+                <td>You have the right to obtain, upon request, a copy of the draft Agreement free of charge, unless we are at the time unwilling to enter into the Agreement.</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <th colspan="2">5. Additional information to be given in the case of distance marketing of financial services</th>
+        </thead>
+        <tbody>
+            <thead>
+                <th>(a) concerning the creditor</th>
+            </thead>
+            <tr>
+                <td>Registration number</td>
+                <td>Financial Conduct Authority Registration Number 653019.</td>
+            </tr>
+            <tr>
+                <td>The supervisory authority</td>
+                <td>The Financial Conduct Authority, 25 The North Colonnade, Canary Wharf, London, E14 5HS, is the supervisory authority under the Act.</td>
+            </tr>
+            <thead>
+                <th>(b) concerning the credit agreement</th>
+                </thead>
+            <tr>
+                <td>The law taken by the creditor as a basis for the establishment of relations with you before the conclusion of the credit contract.</td>
+                <td>English Law.</td>
+            </tr>
+            <tr>
+                <td>The law applicable to the credit agreement and/or the competent court</td>
+                <td>English Law.</td>
+            </tr>
+            <tr>
+                <td>Language to be used in connection with your agreement</td>
+                <td>All documents and communications between us will be in English.</td>
+            </tr>
+            <thead>
+                <th colspan="2">c)  concerning redress</th>
+            </thead>
+            <tr>
+                <td>Access the out-of-court complaint an redress mechanism</td>
+                <td>The out-of-court complaint and redress mechanism is the Financial Ombudsman Service (FOS), which can be contacted by telephone at 08000 234 567 or at www.financial-ombudsman.org.uk</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
