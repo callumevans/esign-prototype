@@ -47,6 +47,7 @@ h3 {
 
   .btn-secondary {
     opacity: 0.6;
+    cursor: not-allowed;
   }
 
   .btn:disabled {
