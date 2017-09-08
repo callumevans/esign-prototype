@@ -18,45 +18,49 @@ export class SignAgreementComponent {
   panelDelay = 750;
   timeout: any;
 
-    panelLock = true;
+  panelLock = true;
 
-    public beforeChange($event: NgbPanelChangeEvent) {
-      if (this.panelLock) {
-        $event.preventDefault();
-      }
-
-      this.panelLock = true;
+  public beforeChange($event: NgbPanelChangeEvent) {
+    if (this.panelLock) {
+      $event.preventDefault();
     }
 
-    enableContinueButton(): void {
-      this.completeButtonEnabled =
-          this.SECCIagreementComplete &&
-          this.TnCsagreementComplete &&
-          this.HPagreementComplete &&
-          this.DDMagreementComplete;
-    }
+    this.panelLock = true;
+  }
+
+  enableContinueButton(): void {
+    this.completeButtonEnabled =
+      this.SECCIagreementComplete &&
+      this.TnCsagreementComplete &&
+      this.HPagreementComplete &&
+      this.DDMagreementComplete;
+  }
   setSECCIagreement(val, acc): void {
     this.SECCIagreementComplete = val;
     this.panelLock = false;
-    this.timeout = setTimeout(() => acc.toggle('tncPanel'), this.panelDelay);
+    // this.timeout = setTimeout(() => acc.toggle('tncPanel'), this.panelDelay);
   }
 
   setTnCsagreement(val, acc): void {
     this.TnCsagreementComplete = val;
     this.panelLock = false;
-    this.timeout = setTimeout(() => acc.toggle('hpPanel'), this.panelDelay);
+    // this.timeout = setTimeout(() => acc.toggle('hpPanel'), this.panelDelay);
   }
 
   setHPagreement(val, acc): void {
     this.HPagreementComplete = val;
     this.panelLock = false;
-    this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
+    // this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
   }
 
   setDDMagreement(val, acc): void {
     this.DDMagreementComplete = val;
     this.panelLock = false;
-    this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
+    // this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
     this.completeButtonEnabled = val;
+  }
+
+  nextPanel(name: string, acc: any) {
+    acc.toggle(name);
   }
 }

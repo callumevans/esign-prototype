@@ -33,6 +33,7 @@ h3 {
 
   .accordion-text .fa {
     padding-right: 8px;
+    padding-left: 6px;
     color: #06aeff;
     font-size: 1.2em;
     cursor: pointer;
@@ -43,6 +44,7 @@ h3 {
   .tab a {
     cursor: default !important;    
   }
+
   .btn-secondary {
     opacity: 0.6;
   }
