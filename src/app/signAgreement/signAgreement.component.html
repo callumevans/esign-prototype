@@ -25,6 +25,14 @@
             <ng-template ngbPanelContent>
                 <div class="agreement">
                     {{ agreementBody }}
+                    
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete, acc)">
+                            <strong> I Agree I have read the document and I am ready to continue to the next document.</strong>
+                        </label>
+                    </div>
+
                     <div>
                         <strong>Signed:</strong>
                         <div class="card text-center" style="height: 76px;">
@@ -33,11 +41,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete, acc)"><strong> I Agree I have read the document.</strong>
-                        </label>
-                    </div>
+                    
                 </div>
             </ng-template>
         </ngb-panel>
@@ -65,6 +69,14 @@
             <ng-template ngbPanelContent>
                 <div class="agreement">
                     {{ agreementBody }}
+                    
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete, acc)">
+                            <strong> I Agree I have read the document and I am ready to continue to the next document.</strong>
+                        </label>
+                    </div>
+
                     <div>
                         <strong>Signed:</strong>
                         <div class="card text-center" style="height: 76px;">
@@ -72,11 +84,6 @@
                                 <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ TnCsagreementComplete ? 'J. Bloggs' : '' }}</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                                    <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete, acc)"><strong> I Agree I have read the document.</strong>
-                                </label>
                     </div>
                 </div>
             </ng-template>
@@ -105,6 +112,14 @@
             <ng-template ngbPanelContent>
                 <div class="agreement">
                     {{ agreementBody }}
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete, acc)">
+                            <strong> I Agree I have read the document and I am ready to continue to the next document.</strong>
+                        </label>
+                    </div>
+
                     <div>
                         <strong>Signed:</strong>
                         <div class="card text-center" style="height: 76px;">
@@ -113,11 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete, acc)"><strong> I Agree I have read the document.</strong>
-                        </label>
-                    </div>
+                    
                 </div>
             </ng-template>
         </ngb-panel>
@@ -145,14 +156,6 @@
             <ng-template ngbPanelContent>
                 <div class="agreement">
                     {{ agreementBody }}
-                    <div>
-                        <strong>Signed:</strong>
-                        <div class="card text-center" style="height: 76px;">
-                            <div class="card-body">
-                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ DDMagreementComplete ? 'J. Bloggs' : '' }}</p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="checkbox">
                         <label>
                             <input
@@ -162,6 +165,16 @@
                                 <strong> I Agree I have read the document.</strong>
                         </label>
                     </div>
+                    
+                    <div>
+                        <strong>Signed:</strong>
+                        <div class="card text-center" style="height: 76px;">
+                            <div class="card-body">
+                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ DDMagreementComplete ? 'J. Bloggs' : '' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </ng-template>
         </ngb-panel>
