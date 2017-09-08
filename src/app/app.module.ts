@@ -9,8 +9,9 @@ import { HomeComponent } from 'app/home/home.component';
 import { SignAgreementComponent } from 'app/signAgreement/signAgreement.component';
 import { CompleteAgreementComponent } from 'app/complete/complete.component';
 import { TransitionComponent } from 'app/TransitionPage/transition.component';
-import { MembersDocumentsComponent } from "app/members/documents/members-documents.component";
-import { MembersHomeComponent } from "app/members/home/members-home.component";
+import { MembersDocumentsComponent } from 'app/members/documents/members-documents.component';
+import { MembersHomeComponent } from 'app/members/home/members-home.component';
+import { PrecontractComponent } from 'app/precontract/precontract.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MembersHomeComponent } from "app/members/home/members-home.component";
     CompleteAgreementComponent,
     TransitionComponent,
     MembersHomeComponent,
-    MembersDocumentsComponent
+    MembersDocumentsComponent,
+    PrecontractComponent
   ],
   imports: [
     BrowserModule,
