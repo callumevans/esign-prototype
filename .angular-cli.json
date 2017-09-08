@@ -9,6 +9,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "bootstrap.min.css",
+        "styles.css",
         "favicon.png"
       ],
       "index": "index.html",
@@ -19,7 +21,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
         "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
