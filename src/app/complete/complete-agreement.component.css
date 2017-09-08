@@ -20,6 +20,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.00);
     border-color: white;
     color: white;
+    border-width: 3px;
 }
 
 *{
