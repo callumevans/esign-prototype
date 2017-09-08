@@ -40,14 +40,14 @@
                             <strong> I Agree I have read the document </strong>
                         </label>
                     </div>
-                    <div>
+                    <!-- <div>
                         <strong>Signed:</strong>
                         <div class="card text-center" style="height: 76px;">
                             <div class="card-body">
                                 <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ SECCIagreementComplete ? 'J. Bloggs' : '' }}</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('tncPanel', acc)" [disabled]="!SECCIagreementComplete"> Next document </button>
                     
@@ -99,14 +99,14 @@
                         </label>
                     </div>
 
-                    <div>
+                    <!-- <div>
                         <strong>Signed:</strong>
                         <div class="card text-center" style="height: 76px;">
                             <div class="card-body">
                                 <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ TnCsagreementComplete ? 'J. Bloggs' : '' }}</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('hpPanel', acc)" [disabled]="!TnCsagreementComplete"> Next document </button>
                 </div>
@@ -149,7 +149,7 @@
                             <strong> I Agree I have read the document.</strong>
                         </label>
                     </div>
-
+<!-- 
                     <div>
                         <strong>Signed:</strong>
                         <div class="card text-center" style="height: 76px;">
@@ -157,7 +157,7 @@
                                 <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ HPagreementComplete ? 'J. Bloggs' : '' }}</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('ddmPanel', acc)" [disabled]="!HPagreementComplete"> Next document </button>                    
 
@@ -203,14 +203,14 @@
                         </label>
                     </div>
                     
-                    <div>
+                    <!-- <div>
                         <strong>Signed:</strong>
                         <div class="card text-center" style="height: 76px;">
                             <div class="card-body">
                                 <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ DDMagreementComplete ? 'J. Bloggs' : '' }}</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                 </div>
             </ng-template>
