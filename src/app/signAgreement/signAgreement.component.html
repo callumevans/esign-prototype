@@ -8,16 +8,7 @@
         <ngb-panel id="secciPanel">
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
-                        Pre Contract Information                        
-                    <!-- <span
-                        class="fa fa-info-circle"
-                        placement="right"
-                        ngbPopover="The PCI is a standardised form designed to show you exactly what your finance agreement contains.
-                                    The form will include key details such as type of credit, Annual Percentage Rate (APR), number and frequency of payments, and total amount owed."
-                        triggers="mouseenter:mouseleave"
-                        popoverTitle="Pre Contract Information">
-                    </span> -->
-                    
+                        Pre Contract Information  
                     <span
                     class="fa fa-info-circle"
                     (click)="open(modal1)"></span>
@@ -40,14 +31,6 @@
                             <strong> I Agree I have read the document </strong>
                         </label>
                     </div>
-                    <!-- <div>
-                        <strong>Signed:</strong>
-                        <div class="card text-center" style="height: 76px;">
-                            <div class="card-body">
-                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ SECCIagreementComplete ? 'J. Bloggs' : '' }}</p>
-                            </div>
-                        </div>
-                    </div> -->
 
                     <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('tncPanel', acc)" [disabled]="!SECCIagreementComplete"> Next document </button>
                     
@@ -58,23 +41,7 @@
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
                         Terms & Conditions
-                        
-                    <!-- <span
-                        class="fa fa-info-circle"
-                        placement="right"
-                        ngbPopover="Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as ToS or ToS and ToU) are rules by which one must agree to abide in order to use a service.
-                            Terms of service can also be merely a disclaimer, especially regarding the use of websites."
-                        triggers="mouseenter:mouseleave"                        
-                        popoverTitle="Terms and Conditions Information">
-                    </span> -->
-<!--                     
-                    <span
-                        class="fa fa-info-circle"
-                        (click)="open('Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as ToS or ToS and ToU) are rules by which one must agree to abide in order to use a service.
-                            Terms of service can also be merely a disclaimer, especially regarding the use of websites.')"
-                        popoverTitle="Terms and Conditions Information">
-                    </span> -->
-                    
+
                     <span
                     class="fa fa-info-circle"
                     (click)="open(modal2)"></span>
@@ -99,15 +66,6 @@
                         </label>
                     </div>
 
-                    <!-- <div>
-                        <strong>Signed:</strong>
-                        <div class="card text-center" style="height: 76px;">
-                            <div class="card-body">
-                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ TnCsagreementComplete ? 'J. Bloggs' : '' }}</p>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('hpPanel', acc)" [disabled]="!TnCsagreementComplete"> Next document </button>
                 </div>
             </ng-template>
@@ -116,15 +74,6 @@
             <ng-template ngbPanelTitle>
                 <div class="accordion-text">
                         Hire Purchase Agreement
-                        
-                    <!-- <span
-                        class="fa fa-info-circle"
-                        placement="right"
-                        ngbPopover="If you choose to pay for your car with a Hire Purchase agreement, you will normally pay an initial deposit and will pay off the entire value of the car in monthly instalments.
-                            When all the payments are made, the Hire Purchase agreement ends and you own the car."
-                        triggers="mouseenter:mouseleave"                        
-                        popoverTitle="Hire Purchase Agreement">
-                    </span> -->
                     
                     <span
                     class="fa fa-info-circle"
@@ -149,15 +98,6 @@
                             <strong> I Agree I have read the document.</strong>
                         </label>
                     </div>
-<!-- 
-                    <div>
-                        <strong>Signed:</strong>
-                        <div class="card text-center" style="height: 76px;">
-                            <div class="card-body">
-                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ HPagreementComplete ? 'J. Bloggs' : '' }}</p>
-                            </div>
-                        </div>
-                    </div> -->
                     
                     <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('ddmPanel', acc)" [disabled]="!HPagreementComplete"> Next document </button>                    
 
@@ -169,15 +109,6 @@
                 <div class="accordion-text">
                         Direct Debit Mandate
                         
-                    <!-- <span
-                        class="fa fa-info-circle"
-                        placement="right"
-                        ngbPopover="A Direct Debit Instruction is an authorisation from your customer to collect future payments.
-                            The details of each authorisation are standardised: All future payments are authorised so you can collect any amount at any time from your customer."
-                        triggers="mouseenter:mouseleave"                        
-                        popoverTitle="Direct Debit Mandate">
-                    </span> -->
-
                     <span
                         class="fa fa-info-circle"
                         (click)="open(modal4)"></span>
@@ -203,15 +134,6 @@
                         </label>
                     </div>
                     
-                    <!-- <div>
-                        <strong>Signed:</strong>
-                        <div class="card text-center" style="height: 76px;">
-                            <div class="card-body">
-                                <p class="card-text" style="font-family: 'Brush Script MT'; font-size: 24px;">{{ DDMagreementComplete ? 'J. Bloggs' : '' }}</p>
-                            </div>
-                        </div>
-                    </div> -->
-                    
                 </div>
             </ng-template>
         </ngb-panel>
@@ -219,7 +141,7 @@
     <br/>
     <button class="btn" [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
         [attr.disabled]="!completeButtonEnabled == true ? true : null" routerLink="/completeAgreement">Click and Complete</button>
-        <br />
+    <br />
 </div>
 
 

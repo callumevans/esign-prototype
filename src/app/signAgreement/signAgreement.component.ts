@@ -16,8 +16,6 @@ export class SignAgreementComponent {
   TnCsagreementComplete = false;
   HPagreementComplete = false;
   DDMagreementComplete = false;
-  panelDelay = 750;
-  timeout: any;
 
   panelLock = true;
 
@@ -34,11 +32,7 @@ export class SignAgreementComponent {
   }
 
   open(content) {
-    this.modalService.open(content).result.then((result) => {
-      // this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+    this.modalService.open(content);
   }
 
 
@@ -52,25 +46,21 @@ export class SignAgreementComponent {
   setSECCIagreement(val, acc): void {
     this.SECCIagreementComplete = val;
     this.panelLock = false;
-    // this.timeout = setTimeout(() => acc.toggle('tncPanel'), this.panelDelay);
   }
 
   setTnCsagreement(val, acc): void {
     this.TnCsagreementComplete = val;
     this.panelLock = false;
-    // this.timeout = setTimeout(() => acc.toggle('hpPanel'), this.panelDelay);
   }
 
   setHPagreement(val, acc): void {
     this.HPagreementComplete = val;
     this.panelLock = false;
-    // this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
   }
 
   setDDMagreement(val, acc): void {
     this.DDMagreementComplete = val;
     this.panelLock = false;
-    // this.timeout = setTimeout(() => acc.toggle('ddmPanel'), this.panelDelay);
     this.completeButtonEnabled = val;
   }
 
