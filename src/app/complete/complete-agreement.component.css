@@ -1,28 +1,26 @@
-h1 {
-    margin-bottom: 15px;
-}
-.check-icon {
+
+/* .check-icon {
     font-size: 64px;
     color: #b1da5c;
     text-align: center;
     margin-bottom: 10px;
+} */
+
+.check-icon img {
+    width: 140px;
 }
 
 .button-container{
     text-align: center;
 }
 
-.btn {
-    margin-top:10px;
-}
-
-.btn-purple {
+/* .btn-purple {
     background-color: rgba(0, 0, 0, 0.00);
     border-color: white;
     color: white;
     border-width: 3px;
-}
+} */
 
-*{
+.container {
     text-align: center;
 }
