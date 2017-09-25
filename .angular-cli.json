@@ -10,7 +10,6 @@
       "assets": [
         "assets",
         "bootstrap.min.css",
-        "styles.css",
         "favicon.png"
       ],
       "index": "index.html",
@@ -21,6 +20,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "styles.less",        
         "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
@@ -53,7 +53,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "less",
     "component": {}
   }
 }

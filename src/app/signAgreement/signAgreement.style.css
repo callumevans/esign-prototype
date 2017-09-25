@@ -31,13 +31,13 @@ h3 {
     color: black;
   }
 
-  .accordion-text .fa {
+  /* .accordion-text .fa {
     padding-right: 8px;
     padding-left: 6px;
     color: #06aeff;
     font-size: 1.2em;
     cursor: pointer;
-  }
+  } */
   .accordion-text:hover {
       cursor: default !important;
   }
