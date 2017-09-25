@@ -1,7 +1,9 @@
 <div class="container">
     
-    <h3 class="white">
-        Please make sure you read the information carefully and scroll to the bottom to sign
+    <h3>
+        <strong>
+            Please make sure you read the information carefully and scroll to the bottom of each section to sign
+        </strong>
     </h3>
 
     <ngb-accordion [closeOthers]="true" activeIds="static-1" #acc="ngbAccordion" (panelChange)="beforeChange($event)">
@@ -10,20 +12,20 @@
                 <div class="accordion-text">
                         Pre Contract Information  
 
-                        <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle-o fa-stack-2x"></i>
-                                <i class="fa fa-info fa-stack-1x"></i>
-                              </span>
+                        <span class="fa-stack">
+                            <i class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa fa-info fa-stack-1x"></i>
+                        </span>
                               
                     <!-- <span
                     class="fa fa-info-circle"
                     (click)="open(modal1)"></span> -->
                     
                     <button
-                        class="btn agreementButton"
+                        class="btn float-right"
                         [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }"
                         (click)="panelLock = false;">
-                                {{ !SECCIagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'secciPanel' ? '&#9650;' : '&#9660;' }}</button>
+                                {{ !SECCIagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'secciPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="SECCIagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
 
@@ -31,15 +33,14 @@
             <ng-template ngbPanelContent>
                 <div class="agreement">
                     <precontract-component></precontract-component>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete, acc)">
-                            <strong> I Agree I have read the document </strong>
-                        </label>
-                    </div>
 
-                    <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('tncPanel', acc)" [disabled]="!SECCIagreementComplete"> Next document </button>
-                    
+                    <hr>
+
+                    <div class="signature-container">
+                        <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete, acc)">
+                        <label> I Agree I have read the document </label>
+                        <button class="btn btn-success" (click)="nextPanel('tncPanel', acc)" [disabled]="!SECCIagreementComplete"> Next document </button>
+                    </div>
                 </div>
             </ng-template>
         </ngb-panel>
@@ -52,12 +53,13 @@
                     class="fa fa-info-circle"
                     (click)="open(modal2)"></span>
                     
-                    <button class="btn agreementButton" [ngClass]="{
-                                    'btn-success': SECCIagreementComplete && !TnCsagreementComplete,
-                                    'btn-light': TnCsagreementComplete,
-                                    'btn-secondary': !SECCIagreementComplete }"
+                    <button class="btn float-right" [ngClass]="{
+                                    'btn-success': !TnCsagreementComplete,
+                                    'btn-light': TnCsagreementComplete 
+                                    }"
+                                    [disabled]="!SECCIagreementComplete"
                                     (click)="panelLock = false;">
-                                {{ !TnCsagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'tncPanel' ? '&#9650;' : '&#9660;' }}</button>
+                                {{ !TnCsagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'tncPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="TnCsagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
             </ng-template>
@@ -65,14 +67,13 @@
                 <div class="agreement">
                     {{ agreementBody }}
                     
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete, acc)">
-                            <strong> I Agree I have read the document.</strong>
-                        </label>
-                    </div>
+                    <hr>
 
-                    <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('hpPanel', acc)" [disabled]="!TnCsagreementComplete"> Next document </button>
+                    <div class="signature-container">
+                        <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete, acc)">
+                        <strong> I Agree I have read the document.</strong>
+                        <button class="btn btn-success" (click)="nextPanel('hpPanel', acc)" [disabled]="!TnCsagreementComplete"> Next document </button>
+                    </div>
                 </div>
             </ng-template>
         </ngb-panel>
@@ -85,12 +86,13 @@
                     class="fa fa-info-circle"
                     (click)="open(modal3)"></span>
 
-                    <button class="btn agreementButton" [ngClass]="{
-                                'btn-success': TnCsagreementComplete && !HPagreementComplete,
-                                'btn-light': HPagreementComplete,
-                                'btn-secondary': !TnCsagreementComplete }"
+                    <button class="btn float-right" [ngClass]="{
+                                'btn-success': !HPagreementComplete,
+                                'btn-light': HPagreementComplete
+                                }"
+                                [disabled]="!TnCsagreementComplete"
                                 (click)="panelLock = false;">
-                            {{ !HPagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'hpPanel' ? '&#9650;' : '&#9660;' }}</button>
+                            {{ !HPagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'hpPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="HPagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
             </ng-template>
@@ -98,15 +100,15 @@
                 <div class="agreement">
                     {{ agreementBody }}
 
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete, acc)">
-                            <strong> I Agree I have read the document.</strong>
-                        </label>
-                    </div>
-                    
-                    <button class="btn btn-success btn-block" style="margin-top:10px" (click)="nextPanel('ddmPanel', acc)" [disabled]="!HPagreementComplete"> Next document </button>                    
+                    <hr>
 
+                    <div class="signature-container">
+                        <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete, acc)">
+                        <strong> I Agree I have read the document.</strong>
+                    
+                        <button class="btn btn-success" (click)="nextPanel('ddmPanel', acc)" [disabled]="!HPagreementComplete"> Next document </button>                    
+                    </div>
+                
                 </div>
             </ng-template>
         </ngb-panel>
@@ -118,35 +120,42 @@
                     <span
                         class="fa fa-info-circle"
                         (click)="open(modal4)"></span>
-                    <button class="btn agreementButton" [ngClass]="{
-                                'btn-success': HPagreementComplete && !DDMagreementComplete,
-                                'btn-light': DDMagreementComplete,
-                                'btn-secondary': !HPagreementComplete }"
+                    <button class="btn float-right" [ngClass]="{
+                                'btn-success': !DDMagreementComplete,
+                                'btn-light': DDMagreementComplete 
+                                }"
+                                [disabled]="!HPagreementComplete"
                                 (click)="panelLock = false;">
-                            {{ !DDMagreementComplete ? 'Start ' : '' }}{{ acc.activeIds == 'ddmPanel' ? '&#9650;' : '&#9660;' }}</button>
+                            {{ !DDMagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'ddmPanel' ? '&#9650;' : '&#9660;' }}</button>
                     <span *ngIf="DDMagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
             </ng-template>
             <ng-template ngbPanelContent>
                 <div class="agreement">
                     {{ agreementBody }}
-                    <div class="checkbox">
-                        <label>
-                            <input
-                                type="checkbox"
-                                [checked]="DDMagreementComplete"
-                                (change)="setDDMagreement(!DDMagreementComplete, acc)" />
-                                <strong> I Agree I have read the document.</strong>
-                        </label>
+
+                    <hr>
+
+                    <div class="signature-container">
+                        <input type="checkbox"
+                            [checked]="DDMagreementComplete"
+                            (change)="setDDMagreement(!DDMagreementComplete, acc)" />
+                        <strong> I Agree I have read the document.</strong>
                     </div>
                     
                 </div>
             </ng-template>
         </ngb-panel>
     </ngb-accordion>
+
     <br/>
-    <button class="btn" [ngClass]="{'btn-success': completeButtonEnabled, 'btn-secondary': !completeButtonEnabled}"
-        [attr.disabled]="!completeButtonEnabled == true ? true : null" routerLink="/completeAgreement">Click and Complete</button>
+    
+    <button class="btn btn-success"
+        [attr.disabled]="!completeButtonEnabled == true ? true : null" 
+        routerLink="/completeAgreement">
+        Click and Complete
+    </button>
+
     <br />
 </div>
 

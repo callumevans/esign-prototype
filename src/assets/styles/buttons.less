@@ -1,16 +1,35 @@
 .btn {
     margin-top: 10px;
     cursor: pointer;
-}
-
-.btn-success {
-    // background-color:#79ba30;
-    background:#9DD033 !important;
-    border-bottom: 3px solid #78A41B;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     /* border-radius: 5px; */
     padding: 15px 50px;
     border-radius: 11px;
+}
+.btn:focus{
+    box-shadow: 0 0 0 0 !important;
+}
+
+.btn-success {
+    // background-color:#79ba30;
+    background:#9DD033 !important;
+    border-bottom: 3px solid #78A41B;
+}
+.btn-success:disabled {
+    // background-color:#79ba30;
+    background:#CFCFCF !important;
+    border-bottom: 3px solid #7E7E7E;
+    opacity: 1;
+}
+
+.btn-outline-dark {
+    border: 1px solid black;
+    
+}
+
+
+.btn:disabled {
+    cursor: not-allowed;
 }

@@ -6,7 +6,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'sign-agreement',
   templateUrl: 'signAgreement.component.html',
-  styleUrls: ['./signAgreement.style.css']
+  styleUrls: ['./signAgreement.style.less']
 })
 
 export class SignAgreementComponent {
