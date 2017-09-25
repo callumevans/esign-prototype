@@ -1,6 +1,6 @@
 .container {
-    color: white;
-    background: #422d6e !important;
+    color: black;
+    /* background: #422d6e !important; */
 }
 
 .spinner-container {
@@ -24,20 +24,15 @@ img{
     z-index: 0;
 }
 
-h1,h2,h3{
+/* h1,h2,h3{
     color:white;
-}
+} */
 
-h1{
+/* h1{
     font-weight: 800;
-}
+} */
 .display-10 {
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.1;
 }
-
-
-a:hover {
-    text-decoration:none;
- }
