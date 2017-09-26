@@ -25,7 +25,9 @@
                         class="btn float-right"
                         [ngClass]="{'btn-success': !SECCIagreementComplete, 'btn-light': SECCIagreementComplete }"
                         (click)="panelLock = false;">
-                                {{ !SECCIagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'secciPanel' ? '&#9650;' : '&#9660;' }}</button>
+                        {{ !SECCIagreementComplete ? 'START ' : '' }}
+                        <i class="fa" [ngClass]="acc.activeIds == 'secciPanel' ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                    </button>
                     <span *ngIf="SECCIagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
 
@@ -60,7 +62,9 @@
                                     }"
                                     [disabled]="!SECCIagreementComplete"
                                     (click)="panelLock = false;">
-                                {{ !TnCsagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'tncPanel' ? '&#9650;' : '&#9660;' }}</button>
+                                {{ !TnCsagreementComplete ? 'START ' : '' }}
+                        <i class="fa" [ngClass]="acc.activeIds == 'tncPanel' ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                    </button>
                     <span *ngIf="TnCsagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
             </ng-template>
@@ -94,7 +98,9 @@
                                 }"
                                 [disabled]="!TnCsagreementComplete"
                                 (click)="panelLock = false;">
-                            {{ !HPagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'hpPanel' ? '&#9650;' : '&#9660;' }}</button>
+                            {{ !HPagreementComplete ? 'START ' : '' }}
+                        <i class="fa" [ngClass]="acc.activeIds == 'hpPanel' ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                    </button>
                     <span *ngIf="HPagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
             </ng-template>
@@ -128,7 +134,11 @@
                                 }"
                                 [disabled]="!HPagreementComplete"
                                 (click)="panelLock = false;">
-                            {{ !DDMagreementComplete ? 'START ' : '' }}{{ acc.activeIds == 'ddmPanel' ? '&#9650;' : '&#9660;' }}</button>
+                        {{ !DDMagreementComplete ? 'START ' : '' }}
+                            
+                        <i class="fa" [ngClass]="acc.activeIds == 'ddmPanel' ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                    
+                    </button>
                     <span *ngIf="DDMagreementComplete" class="agreementTick">&#10004;</span>
                 </div>
             </ng-template>
