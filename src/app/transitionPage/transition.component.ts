@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 
 export class TransitionComponent implements OnInit, OnDestroy {
-    loadingGifUrl = 'assets/transition.gif';
+    loadingGifUrl = 'assets/247loader_360.gif';
 
     timeout: any; //NodeJS.Timer;
 
