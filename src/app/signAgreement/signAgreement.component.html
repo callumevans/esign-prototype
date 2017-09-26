@@ -38,7 +38,8 @@
 
                     <div class="signature-container">
                         <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete, acc)">
-                        <label> I Agree I have read the document </label>
+                        <label> I Agree I have read the Pre-Contact Agreement </label>
+                        
                         <button class="btn btn-success" (click)="nextPanel('tncPanel', acc)" [disabled]="!SECCIagreementComplete"> Next document </button>
                     </div>
                 </div>
@@ -71,7 +72,8 @@
 
                     <div class="signature-container">
                         <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete, acc)">
-                        <strong> I Agree I have read the document.</strong>
+                        <strong> I Agree I have read the Terms & Conditions.</strong>
+                        
                         <button class="btn btn-success" (click)="nextPanel('hpPanel', acc)" [disabled]="!TnCsagreementComplete"> Next document </button>
                     </div>
                 </div>
@@ -104,7 +106,7 @@
 
                     <div class="signature-container">
                         <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete, acc)">
-                        <strong> I Agree I have read the document.</strong>
+                        <strong> I Agree I have read the Hire Purchase Agreement.</strong>
                     
                         <button class="btn btn-success" (click)="nextPanel('ddmPanel', acc)" [disabled]="!HPagreementComplete"> Next document </button>                    
                     </div>
@@ -137,10 +139,8 @@
                     <hr>
 
                     <div class="signature-container">
-                        <input type="checkbox"
-                            [checked]="DDMagreementComplete"
-                            (change)="setDDMagreement(!DDMagreementComplete, acc)" />
-                        <strong> I Agree I have read the document.</strong>
+                        <input type="checkbox" [checked]="DDMagreementComplete" (change)="setDDMagreement(!DDMagreementComplete, acc)" />
+                        <strong> I Agree I have read the Direct Debit Mandate.</strong>
                     </div>
                     
                 </div>
@@ -161,7 +161,6 @@
 
 
 
-
 <ng-template #modal1 let-c="close" let-d="dismiss">
     <div class="modal-header">
         <h4 class="modal-title">Pre-Contract Agreement</h4>
@@ -177,7 +176,6 @@
         <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
     </div>
 </ng-template>
-
       
 <ng-template #modal2 let-c="close" let-d="dismiss">
     <div class="modal-header">
@@ -187,8 +185,11 @@
         </button>
     </div>
     <div class="modal-body">
-        <p>Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as ToS or ToS and ToU) are rules by which one must agree to abide in order to use a service.
-                Terms of service can also be merely a disclaimer, especially regarding the use of websites.</p>
+        <p>
+            Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as ToS or ToS and ToU) 
+            are rules by which one must agree to abide in order to use a service. Terms of service can also be merely a disclaimer,
+            especially regarding the use of websites.    
+        </p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
