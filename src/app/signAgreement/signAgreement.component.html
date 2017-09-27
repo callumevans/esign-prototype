@@ -2,7 +2,7 @@
     
     <h3>
         <strong>
-            Please make sure you read the information carefully and scroll to the bottom of each section to sign
+            Please read the information listed below carefully and in full, before scrolling to the bottom of each section to sign. 
         </strong>
     </h3>
 
@@ -40,9 +40,9 @@
 
                     <div class="signature-container">
                         <input type="checkbox" [checked]="SECCIagreementComplete" (change)="setSECCIagreement(!SECCIagreementComplete, acc)">
-                        <label> I Agree I have read the Pre-Contact Agreement </label>
+                        <label> I have read and agree to the above pre-contract agreement </label>
                         
-                        <button class="btn btn-success" (click)="nextPanel('tncPanel', acc)" [disabled]="!SECCIagreementComplete"> Next document </button>
+                        <button class="btn btn-success" (click)="nextPanel('tncPanel', acc)" [disabled]="!SECCIagreementComplete"> Next </button>
                     </div>
                 </div>
             </ng-template>
@@ -76,9 +76,9 @@
 
                     <div class="signature-container">
                         <input type="checkbox" [checked]="TnCsagreementComplete" (change)="setTnCsagreement(!TnCsagreementComplete, acc)">
-                        <strong> I Agree I have read the Terms & Conditions.</strong>
+                        <strong> I have read and agree to the above terms and conditions</strong>
                         
-                        <button class="btn btn-success" (click)="nextPanel('hpPanel', acc)" [disabled]="!TnCsagreementComplete"> Next document </button>
+                        <button class="btn btn-success" (click)="nextPanel('hpPanel', acc)" [disabled]="!TnCsagreementComplete"> Next </button>
                     </div>
                 </div>
             </ng-template>
@@ -112,9 +112,9 @@
 
                     <div class="signature-container">
                         <input type="checkbox" [checked]="HPagreementComplete" (change)="setHPagreement(!HPagreementComplete, acc)">
-                        <strong> I Agree I have read the Hire Purchase Agreement.</strong>
+                        <strong> I have read and agree to the above hire purchase agreement.</strong>
                     
-                        <button class="btn btn-success" (click)="nextPanel('ddmPanel', acc)" [disabled]="!HPagreementComplete"> Next document </button>                    
+                        <button class="btn btn-success" (click)="nextPanel('ddmPanel', acc)" [disabled]="!HPagreementComplete"> Next </button>                    
                     </div>
                 
                 </div>
@@ -150,7 +150,7 @@
 
                     <div class="signature-container">
                         <input type="checkbox" [checked]="DDMagreementComplete" (change)="setDDMagreement(!DDMagreementComplete, acc)" />
-                        <strong> I Agree I have read the Direct Debit Mandate.</strong>
+                        <strong> I have read and agree to the above direct debit mandate.</strong>
                     </div>
                     
                 </div>
@@ -163,7 +163,7 @@
     <button class="btn btn-success"
         [attr.disabled]="!completeButtonEnabled == true ? true : null" 
         routerLink="/completeAgreement">
-        Click and Complete
+        Click to complete
     </button>
 
     <br />
